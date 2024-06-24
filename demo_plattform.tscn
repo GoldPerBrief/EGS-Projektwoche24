@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://collectible.gd" id="5_whbju"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ktxsj"]
+normal = Vector2(2.77433e-06, -1)
+distance = -2.0
 
 [sub_resource type="Gradient" id="Gradient_hcq1l"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -39,8 +41,16 @@ texture = SubResource("GradientTexture1D_r5aas")
 region_enabled = true
 region_rect = Rect2(-640, 0, 1280, 20)
 
+[node name="Floor2" type="StaticBody2D" parent="."]
+position = Vector2(2, 571)
+rotation = 1.57079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+position = Vector2(-2.20537e-06, 5.96046e-08)
+shape = SubResource("WorldBoundaryShape2D_ktxsj")
+
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(212, 82)
+position = Vector2(145, 297)
 limit_left = 0
 limit_top = 0
 limit_bottom = 0
@@ -48,7 +58,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(207, 83)
+position = Vector2(140, 298)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_0ad1j")
 
@@ -184,7 +194,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin2" type="StaticBody2D" parent="."]
-position = Vector2(595, 424)
+position = Vector2(611, 374)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin2"]
