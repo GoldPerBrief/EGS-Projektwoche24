@@ -2,11 +2,11 @@
 
 * gehen
 * springen 
-	* double jump
+	- double jump
 * sammeln 
-	* münzen 
-	* fragen
+	- münzen 
+	- fragen
 * high score 
-	* (punkte, "wie viel geld man hat")
+	- (punkte, "wie viel geld man hat")
 
 
