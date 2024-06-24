@@ -7,7 +7,9 @@ const MAX_JUMPS = 2
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var num_jumps = MAX_JUMPS + 1
+var score = 0
 
+@onready var area_collider = $Area2D
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -27,5 +29,9 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 
-func collect_stuff(stuff):
-	print_debug(stuff)
+func make_dead():
+	pass
+
+func collect_stuff(points_amount: int):
+	score += points_amount
+	#print(score)
