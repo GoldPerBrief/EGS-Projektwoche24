@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwspell28tt1o"]
+[gd_scene load_steps=9 format=3 uid="uid://bwspell28tt1o"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0ad1j"]
 [ext_resource type="Texture2D" uid="uid://8klrceqclk5i" path="res://assets/rechteck.png" id="1_ujtuu"]
 [ext_resource type="Texture2D" uid="uid://c7ci4nvrndbdw" path="res://assets/quadrat.png" id="3_b6mcj"]
-[ext_resource type="Texture2D" uid="uid://blb7tpkunr8fk" path="res://icon.svg" id="4_n2kxv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ktxsj"]
 
@@ -98,7 +97,3 @@ texture = ExtResource("3_b6mcj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform5"]
 shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(57, 56)
-texture = ExtResource("4_n2kxv")
