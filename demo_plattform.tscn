@@ -52,7 +52,11 @@ shape = SubResource("RectangleShape2D_1xc2t")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(10, -2)
 scale = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_bottom = 0
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="Plattform" type="StaticBody2D" parent="."]
 position = Vector2(955, 417)
