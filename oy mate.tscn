@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqrot4krhy760"]
+
+[ext_resource type="PackedScene" uid="uid://bwspell28tt1o" path="res://demo_plattform.tscn" id="1_n6jhw"]
+
+[node name="DemoPlattform" instance=ExtResource("1_n6jhw")]
+
+[node name="Floor" parent="." index="0"]
+position = Vector2(10547, 665)
+scale = Vector2(34.96, 1)
