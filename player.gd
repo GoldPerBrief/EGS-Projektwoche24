@@ -8,8 +8,15 @@ const MAX_JUMPS = 2
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var num_jumps = MAX_JUMPS + 1
 var score = 0
+var highscore = 0
 
+@onready var score_label = $"../CanvasLayer/RichTextLabel"
+@onready var scoreboard = $"../CanvasLayer/Scoreboard"
 @onready var area_collider = $Area2D
+
+func _ready():
+	highscore = get_highest_score()
+	update_score_text()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -42,7 +49,48 @@ func make_dead():
 	else:
 		print("u didnt even get any points. u sux.")
 	pass
+	update_highscore_in_csv(score)
+	scoreboard.sb_update()
+	scoreboard.sb_show()
 
 func collect_stuff(points_amount: int):
 	score += points_amount
+	update_score_text()
+	if score > highscore:
+		highscore = score
+		update_score_text()
 	#print(score)
+
+func get_highest_score() -> int:
+	var file
+	if (FileAccess.file_exists("user://scores.csv")):
+		file = FileAccess.open("user://scores.csv", FileAccess.READ)
+	else: 
+		file = FileAccess.open("user://scores.csv", FileAccess.WRITE)
+		file.store_csv_line(["name","score"])
+		file.close()
+		file = FileAccess.open("user://scores.csv", FileAccess.READ)
+				
+	var highest_score = 0
+	var line = file.get_csv_line()
+	while not file.eof_reached():
+		line = file.get_line().strip_edges()
+		if line.is_empty():
+			continue
+		var data = line.split(",")
+		var curr_score = int(data[1])
+		if curr_score > highest_score:
+			highest_score = curr_score
+	file.close()
+	return highest_score
+		
+func update_score_text():
+	score_label.text = "[b]Highscore:\t%d\nPunkte:\t\t%d\n[/b]" % [highscore, score]
+	
+func update_highscore_in_csv(new_highscore: int):
+	var file = FileAccess.open("user://scores.csv", FileAccess.READ_WRITE)
+	while not file.eof_reached():
+		file.get_csv_line()
+	file.store_csv_line(["John Doe", new_highscore])
+	
+	

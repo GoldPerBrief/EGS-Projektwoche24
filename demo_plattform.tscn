@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bwspell28tt1o"]
+[gd_scene load_steps=16 format=3 uid="uid://bwspell28tt1o"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0ad1j"]
 [ext_resource type="Texture2D" uid="uid://8klrceqclk5i" path="res://assets/rechteck.png" id="1_ujtuu"]
@@ -6,17 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cxl6d1gri0dd6" path="res://assets/dreieck.png" id="4_lnfib"]
 [ext_resource type="Texture2D" uid="uid://w51dvcm57gnn" path="res://assets/kreis.png" id="4_mtfec"]
 [ext_resource type="Script" path="res://collectible.gd" id="5_whbju"]
-
-[sub_resource type="SystemFont" id="SystemFont_gdtlj"]
-font_names = PackedStringArray("SF Pro")
-
-[sub_resource type="FontVariation" id="FontVariation_tovrl"]
-base_font = SubResource("SystemFont_gdtlj")
-variation_opentype = {
-2003072104: 100,
-2003265652: 400
-}
-variation_embolden = 0.37
+[ext_resource type="Script" path="res://scoreboard.gd" id="7_oiwhb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ktxsj"]
 normal = Vector2(2.77433e-06, -1)
@@ -37,23 +27,18 @@ size = Vector2(76, 38)
 [sub_resource type="CircleShape2D" id="CircleShape2D_8p880"]
 radius = 27.0
 
-[node name="DemoPlattform" type="Node2D"]
+[sub_resource type="SystemFont" id="SystemFont_gdtlj"]
+font_names = PackedStringArray("SF Pro")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 844.0
-offset_top = 29.0
-offset_right = 1156.0
-offset_bottom = 180.0
-theme_override_fonts/bold_font = SubResource("FontVariation_tovrl")
-theme_override_font_sizes/normal_font_size = 53
-theme_override_font_sizes/bold_font_size = 38
-bbcode_enabled = true
-text = "[b]Highscore: 	0
-Punkte:		0
-[/b]"
-fit_content = true
-autowrap_mode = 0
-shortcut_keys_enabled = false
+[sub_resource type="FontVariation" id="FontVariation_tovrl"]
+base_font = SubResource("SystemFont_gdtlj")
+variation_opentype = {
+2003072104: 100,
+2003265652: 400
+}
+variation_embolden = 0.37
+
+[node name="DemoPlattform" type="Node2D"]
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(640, 665)
@@ -327,3 +312,35 @@ script = ExtResource("5_whbju")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Coin4/Area2D"]
 shape = SubResource("CircleShape2D_8p880")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 844.0
+offset_top = 29.0
+offset_right = 1156.0
+offset_bottom = 180.0
+theme_override_fonts/bold_font = SubResource("FontVariation_tovrl")
+theme_override_font_sizes/normal_font_size = 53
+theme_override_font_sizes/bold_font_size = 38
+bbcode_enabled = true
+text = "[b]Highscore: 	0
+Punkte:		0
+[/b]"
+fit_content = true
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Scoreboard" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 386.0
+offset_top = 85.0
+offset_right = 698.0
+offset_bottom = 440.0
+theme_override_fonts/bold_font = SubResource("FontVariation_tovrl")
+theme_override_font_sizes/normal_font_size = 53
+theme_override_font_sizes/bold_font_size = 38
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+shortcut_keys_enabled = false
+script = ExtResource("7_oiwhb")
