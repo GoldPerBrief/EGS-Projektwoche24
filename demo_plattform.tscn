@@ -49,6 +49,11 @@ texture = ExtResource("1_ujtuu")
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_1xc2t")
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(10, -2)
+scale = Vector2(2, 2)
+position_smoothing_enabled = true
+
 [node name="Plattform" type="StaticBody2D" parent="."]
 position = Vector2(955, 417)
 
@@ -118,11 +123,11 @@ shape = SubResource("CircleShape2D_8p880")
 position = Vector2(108, 21)
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(83, 308)
+position = Vector2(-11.4948, 312.505)
 scale = Vector2(0.414144, 0.414144)
 texture = ExtResource("4_mtfec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(83, 308)
+position = Vector2(-11.4948, 312.505)
 scale = Vector2(2.6765, 2.6765)
 shape = SubResource("CircleShape2D_5mysb")
