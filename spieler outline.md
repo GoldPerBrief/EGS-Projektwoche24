@@ -1,12 +1,13 @@
 # Spieler
 
-* gehen
-* springen 
-	- double jump
-* sammeln 
-	- münzen 
-	- fragen
-* high score 
-	- (punkte, "wie viel geld man hat")
+[X] gehen
+[X] springen 
+	[X] double jump
+[X] sammeln 
+	[X] münzen 
+	[ ] fragen (?)
+[ ] high score 
+	[X] punkte
+	[ ] 
 
 

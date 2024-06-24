@@ -39,6 +39,14 @@ texture = SubResource("GradientTexture1D_r5aas")
 region_enabled = true
 region_rect = Rect2(-640, 0, 1280, 20)
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(212, 82)
+limit_left = 0
+limit_top = 0
+limit_bottom = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(207, 83)
 scale = Vector2(0.5, 0.5)
@@ -50,15 +58,6 @@ texture = ExtResource("1_ujtuu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_1xc2t")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(10, -2)
-scale = Vector2(2, 2)
-limit_left = 0
-limit_top = 0
-limit_bottom = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
 
 [node name="Area2D" type="Area2D" parent="Player"]
 
@@ -112,7 +111,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Spike" type="StaticBody2D" parent="."]
-position = Vector2(1754, 628)
+position = Vector2(1370, 625)
 metadata/deadly = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike"]
@@ -167,7 +166,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Coin" type="StaticBody2D" parent="."]
-position = Vector2(400, 530)
+position = Vector2(427, 481)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin"]
@@ -185,7 +184,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin2" type="StaticBody2D" parent="."]
-position = Vector2(589, 459)
+position = Vector2(595, 424)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin2"]
@@ -203,7 +202,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin3" type="StaticBody2D" parent="."]
-position = Vector2(803, 364)
+position = Vector2(798, 327)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin3"]
@@ -220,8 +219,62 @@ script = ExtResource("5_whbju")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Coin3/Area2D"]
 shape = SubResource("CircleShape2D_8p880")
 
+[node name="Coin5" type="StaticBody2D" parent="."]
+position = Vector2(1122, 305)
+metadata/value = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Coin5"]
+scale = Vector2(0.421875, 0.421875)
+texture = ExtResource("4_mtfec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin5"]
+shape = SubResource("CircleShape2D_8p880")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="Coin5"]
+script = ExtResource("5_whbju")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Coin5/Area2D"]
+shape = SubResource("CircleShape2D_8p880")
+
+[node name="Coin6" type="StaticBody2D" parent="."]
+position = Vector2(1325, 326)
+metadata/value = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Coin6"]
+scale = Vector2(0.421875, 0.421875)
+texture = ExtResource("4_mtfec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin6"]
+shape = SubResource("CircleShape2D_8p880")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="Coin6"]
+script = ExtResource("5_whbju")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Coin6/Area2D"]
+shape = SubResource("CircleShape2D_8p880")
+
+[node name="Coin7" type="StaticBody2D" parent="."]
+position = Vector2(957, 312)
+metadata/value = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Coin7"]
+scale = Vector2(0.421875, 0.421875)
+texture = ExtResource("4_mtfec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin7"]
+shape = SubResource("CircleShape2D_8p880")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="Coin7"]
+script = ExtResource("5_whbju")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Coin7/Area2D"]
+shape = SubResource("CircleShape2D_8p880")
+
 [node name="Coin4" type="StaticBody2D" parent="."]
-position = Vector2(979, 337)
+position = Vector2(1518, 325)
 metadata/value = 1000
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin4"]
