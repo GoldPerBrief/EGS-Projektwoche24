@@ -28,4 +28,4 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func collect_stuff(stuff):
-	print_debug("asd")
+	print_debug(stuff)
