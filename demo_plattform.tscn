@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwspell28tt1o"]
+[gd_scene load_steps=17 format=3 uid="uid://bwspell28tt1o"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0ad1j"]
 [ext_resource type="Texture2D" uid="uid://8klrceqclk5i" path="res://assets/rechteck.png" id="1_ujtuu"]
@@ -37,6 +37,8 @@ variation_opentype = {
 2003265652: 400
 }
 variation_embolden = 0.37
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_j62h0"]
 
 [node name="DemoPlattform" type="Node2D"]
 
@@ -348,3 +350,22 @@ fit_content = true
 autowrap_mode = 0
 shortcut_keys_enabled = false
 script = ExtResource("7_oiwhb")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 419.0
+offset_top = 422.0
+offset_right = 485.0
+offset_bottom = 453.0
+scale = Vector2(0.999221, 1.00295)
+button_mask = 7
+text = "Sichern"
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 606.0
+offset_top = 412.0
+offset_right = 718.0
+offset_bottom = 443.0
+scale = Vector2(0.999221, 1.00295)
+button_mask = 7
+button_group = SubResource("ButtonGroup_j62h0")
+text = "Nicht Sichern"
