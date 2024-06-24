@@ -38,7 +38,7 @@ region_enabled = true
 region_rect = Rect2(-640, 0, 1280, 20)
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(242, 144)
+position = Vector2(207, 83)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_0ad1j")
 
