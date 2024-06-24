@@ -6,7 +6,7 @@ const MAX_JUMPS = 2
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var num_jumps = 0
+var num_jumps = MAX_JUMPS + 1
 
 
 func _physics_process(delta: float) -> void:
