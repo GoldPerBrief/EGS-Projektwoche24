@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwspell28tt1o"]
+[gd_scene load_steps=12 format=3 uid="uid://bwspell28tt1o"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0ad1j"]
 [ext_resource type="Texture2D" uid="uid://8klrceqclk5i" path="res://assets/rechteck.png" id="1_ujtuu"]
@@ -21,6 +21,8 @@ size = Vector2(76, 38)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8p880"]
 radius = 26.6833
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5mysb"]
 
 [node name="DemoPlattform" type="Node2D"]
 
@@ -111,3 +113,16 @@ texture = ExtResource("4_mtfec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform6"]
 shape = SubResource("CircleShape2D_8p880")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(108, 21)
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(83, 308)
+scale = Vector2(0.414144, 0.414144)
+texture = ExtResource("4_mtfec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(83, 308)
+scale = Vector2(2.6765, 2.6765)
+shape = SubResource("CircleShape2D_5mysb")
