@@ -3,11 +3,16 @@
 * [X] gehen
 * [X] springen 
 	* [X] double jump
-* [X] sammeln 
+* [ ] sammeln 
 	* [X] münzen 
 	* [ ] fragen (?)
-* [ ] high score 
+* [ ] high score system
 	* [X] punkte
-	* [ ] 
+	* [ ] display für die punkte
+	* [ ] high scores
+		* [ ] speichern der high scores
+		* [ ] vergleichen der high scores
+		* [ ] namenseingabe?
+		* [ ] ranglisten?
 
 
