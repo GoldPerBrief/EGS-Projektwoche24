@@ -8,10 +8,10 @@
 position = Vector2(10550, 665)
 scale = Vector2(34.96, 1)
 
-[node name="Player" parent="." index="3"]
+[node name="Player" parent="." index="2"]
 position = Vector2(259, 132)
 
-[node name="Plattform" parent="." index="4"]
+[node name="Plattform" parent="." index="3"]
 position = Vector2(1392, 491)
 
 [node name="Plattform2" parent="." index="9"]
