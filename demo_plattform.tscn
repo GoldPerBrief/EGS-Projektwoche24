@@ -350,6 +350,7 @@ shortcut_keys_enabled = false
 script = ExtResource("7_oiwhb")
 
 [node name="Save_Button" type="Button" parent="CanvasLayer"]
+visible = false
 offset_left = 469.0
 offset_top = 458.0
 offset_right = 535.0
@@ -359,6 +360,7 @@ button_mask = 7
 text = "Sichern"
 
 [node name="Discard_Button" type="Button" parent="CanvasLayer"]
+visible = false
 offset_left = 712.0
 offset_top = 454.0
 offset_right = 824.0
@@ -368,6 +370,7 @@ button_mask = 7
 text = "Nicht Sichern"
 
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+visible = false
 custom_minimum_size = Vector2(300, 50)
 offset_left = 218.0
 offset_top = 191.0
@@ -376,6 +379,7 @@ offset_bottom = 241.0
 placeholder_text = "Name: John Doe"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
 offset_left = 216.0
 offset_top = 157.0
 offset_right = 256.0
