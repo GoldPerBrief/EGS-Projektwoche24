@@ -55,5 +55,5 @@ func sterben():
 func einsammeln(body):
 	var punkte = body.get_meta("punkte")
 	score += punkte
-	#scoretext.aktualisieren
+	#scoretext.aktualisieren()
 	
