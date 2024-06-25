@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bwspell28tt1o"]
+[gd_scene load_steps=19 format=3 uid="uid://bwspell28tt1o"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0ad1j"]
 [ext_resource type="Texture2D" uid="uid://c7ci4nvrndbdw" path="res://assets/quadrat.png" id="3_b6mcj"]
@@ -17,6 +17,8 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_r5aas"]
 gradient = SubResource("Gradient_hcq1l")
 
+[sub_resource type="ImageTexture" id="ImageTexture_j25et"]
+
 [sub_resource type="Animation" id="Animation_t86g4"]
 resource_name = "idle"
 tracks/0/type = "value"
@@ -26,14 +28,30 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0.0666667, 0.166667, 0.266667, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": []
+"values": [SubResource("ImageTexture_j25et"), null, null, null]
+}
+
+[sub_resource type="Animation" id="Animation_p7yvf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xlhug"]
 _data = {
+"RESET": SubResource("Animation_p7yvf"),
 "idle": SubResource("Animation_t86g4")
 }
 
