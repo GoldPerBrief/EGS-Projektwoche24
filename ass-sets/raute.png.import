@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w51dvcm57gnn"
-path="res://.godot/imported/kreis.png-466107179b43006e0c371f679519d0c6.ctex"
+uid="uid://cjl3y7qoj0rdm"
+path="res://.godot/imported/raute.png-0c5888014d80c7e6bb2be3f0a232f8c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kreis.png"
-dest_files=["res://.godot/imported/kreis.png-466107179b43006e0c371f679519d0c6.ctex"]
+source_file="res://ass-sets/raute.png"
+dest_files=["res://.godot/imported/raute.png-0c5888014d80c7e6bb2be3f0a232f8c4.ctex"]
 
 [params]
 

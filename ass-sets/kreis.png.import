@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxl6d1gri0dd6"
-path="res://.godot/imported/dreieck.png-5b565af89261b45ba00396a43c3cffa5.ctex"
+uid="uid://w51dvcm57gnn"
+path="res://.godot/imported/kreis.png-f23ecd6019c81668fe5fa0b72d8af9ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dreieck.png"
-dest_files=["res://.godot/imported/dreieck.png-5b565af89261b45ba00396a43c3cffa5.ctex"]
+source_file="res://ass-sets/kreis.png"
+dest_files=["res://.godot/imported/kreis.png-f23ecd6019c81668fe5fa0b72d8af9ed.ctex"]
 
 [params]
 

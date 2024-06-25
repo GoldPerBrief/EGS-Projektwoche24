@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7ci4nvrndbdw"
-path="res://.godot/imported/quadrat.png-3542c28f8d9002ae09b65fbabef54194.ctex"
+uid="uid://cxl6d1gri0dd6"
+path="res://.godot/imported/dreieck.png-16064723ca636794cf377987c239dd6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/quadrat.png"
-dest_files=["res://.godot/imported/quadrat.png-3542c28f8d9002ae09b65fbabef54194.ctex"]
+source_file="res://ass-sets/dreieck.png"
+dest_files=["res://.godot/imported/dreieck.png-16064723ca636794cf377987c239dd6f.ctex"]
 
 [params]
 

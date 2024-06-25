@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjl3y7qoj0rdm"
-path="res://.godot/imported/raute.png-db0be25648901a6d5dfbc253c2da3904.ctex"
+uid="uid://8klrceqclk5i"
+path="res://.godot/imported/rechteck.png-417b81b432b1c41a093746d7b1b34f4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/raute.png"
-dest_files=["res://.godot/imported/raute.png-db0be25648901a6d5dfbc253c2da3904.ctex"]
+source_file="res://ass-sets/rechteck.png"
+dest_files=["res://.godot/imported/rechteck.png-417b81b432b1c41a093746d7b1b34f4e.ctex"]
 
 [params]
 

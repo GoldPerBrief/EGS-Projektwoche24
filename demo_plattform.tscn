@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://bwspell28tt1o"]
 
 [ext_resource type="PackedScene" uid="uid://c8f3evvyjfi63" path="res://player.tscn" id="1_y668q"]
-[ext_resource type="Texture2D" uid="uid://c7ci4nvrndbdw" path="res://assets/quadrat.png" id="3_b6mcj"]
-[ext_resource type="Texture2D" uid="uid://cxl6d1gri0dd6" path="res://assets/dreieck.png" id="4_lnfib"]
-[ext_resource type="Texture2D" uid="uid://w51dvcm57gnn" path="res://assets/kreis.png" id="4_mtfec"]
+[ext_resource type="Texture2D" uid="uid://cxl6d1gri0dd6" path="res://ass-sets/dreieck.png" id="3_2wyge"]
+[ext_resource type="Texture2D" uid="uid://c7ci4nvrndbdw" path="res://ass-sets/quadrat.png" id="4_swnke"]
+[ext_resource type="Texture2D" uid="uid://w51dvcm57gnn" path="res://ass-sets/kreis.png" id="5_0c22d"]
 [ext_resource type="Script" path="res://collectible.gd" id="5_whbju"]
 [ext_resource type="Script" path="res://scoreboard.gd" id="7_oiwhb"]
 
@@ -64,7 +64,7 @@ position = Vector2(996, 272)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -75,7 +75,7 @@ position = Vector2(1134, 277)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform6"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform6"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -86,7 +86,7 @@ position = Vector2(1287, 271)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform7"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform7"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -97,7 +97,7 @@ position = Vector2(1492, 267)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform8"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform8"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -110,7 +110,7 @@ metadata/is_victory = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform9"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform9"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -122,7 +122,7 @@ metadata/deadly = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike"]
 scale = Vector2(0.406081, 0.509241)
-texture = ExtResource("4_lnfib")
+texture = ExtResource("3_2wyge")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spike"]
 polygon = PackedVector2Array(26.5, 32, -26.5, 32, 0, -35)
@@ -132,7 +132,7 @@ position = Vector2(699, 333)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform2"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform2"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -143,7 +143,7 @@ position = Vector2(840, 305)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform3"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform3"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -154,7 +154,7 @@ position = Vector2(570, 359)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform4"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform4"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -165,7 +165,7 @@ position = Vector2(426, 414)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform5"]
 scale = Vector2(0.6, 0.3)
-texture = ExtResource("3_b6mcj")
+texture = ExtResource("4_swnke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform5"]
 shape = SubResource("RectangleShape2D_mjlfx")
@@ -177,7 +177,7 @@ metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin"]
 scale = Vector2(0.421875, 0.421875)
-texture = ExtResource("4_mtfec")
+texture = ExtResource("5_0c22d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
 shape = SubResource("CircleShape2D_8p880")
@@ -195,7 +195,7 @@ metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin2"]
 scale = Vector2(0.421875, 0.421875)
-texture = ExtResource("4_mtfec")
+texture = ExtResource("5_0c22d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin2"]
 shape = SubResource("CircleShape2D_8p880")
@@ -213,7 +213,7 @@ metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin3"]
 scale = Vector2(0.421875, 0.421875)
-texture = ExtResource("4_mtfec")
+texture = ExtResource("5_0c22d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin3"]
 shape = SubResource("CircleShape2D_8p880")
@@ -231,7 +231,7 @@ metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin5"]
 scale = Vector2(0.421875, 0.421875)
-texture = ExtResource("4_mtfec")
+texture = ExtResource("5_0c22d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin5"]
 shape = SubResource("CircleShape2D_8p880")
@@ -249,7 +249,7 @@ metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin6"]
 scale = Vector2(0.421875, 0.421875)
-texture = ExtResource("4_mtfec")
+texture = ExtResource("5_0c22d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin6"]
 shape = SubResource("CircleShape2D_8p880")
@@ -267,7 +267,7 @@ metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin7"]
 scale = Vector2(0.421875, 0.421875)
-texture = ExtResource("4_mtfec")
+texture = ExtResource("5_0c22d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin7"]
 shape = SubResource("CircleShape2D_8p880")
@@ -285,7 +285,7 @@ metadata/value = 1000
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin4"]
 scale = Vector2(0.421875, 0.421875)
-texture = ExtResource("4_mtfec")
+texture = ExtResource("5_0c22d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin4"]
 shape = SubResource("CircleShape2D_8p880")

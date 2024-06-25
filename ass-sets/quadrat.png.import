@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8klrceqclk5i"
-path="res://.godot/imported/rechteck.png-1ddf61874e8fd9ea91d75ff7d8137ce4.ctex"
+uid="uid://c7ci4nvrndbdw"
+path="res://.godot/imported/quadrat.png-ddbfd46c648af30ad02713242c60782a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rechteck.png"
-dest_files=["res://.godot/imported/rechteck.png-1ddf61874e8fd9ea91d75ff7d8137ce4.ctex"]
+source_file="res://ass-sets/quadrat.png"
+dest_files=["res://.godot/imported/quadrat.png-ddbfd46c648af30ad02713242c60782a.ctex"]
 
 [params]
 
