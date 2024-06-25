@@ -31,6 +31,8 @@ func _physics_process(delta: float) -> void:
 	for body in area_collider.get_overlapping_bodies():
 		if body.has_meta("deadly") and body.get_meta("deadly"):
 			make_dead()
+		elif body.has_meta("is_victory") and body.get_meta("is_victory"):
+			stage_victory()
 			
 	if Input.is_action_just_pressed("ui_accept") and ( is_on_floor() or num_jumps < MAX_JUMPS ):
 		velocity.y = JUMP_VELOCITY
@@ -42,9 +44,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	get_parent().get_node("Camera2D").position = position
+	#get_node("Camera2D").position = position
 	move_and_slide()
 
+func stage_victory():
+	make_dead()
+	pass
 
 func make_dead():
 	queue_free()
@@ -90,6 +95,3 @@ func get_highest_score() -> int:
 		
 func update_score_text():
 	score_label.text = "[b]Highscore:\t%d\nPunkte:\t\t%d\n[/b]" % [highscore, score]
-	
-
-	

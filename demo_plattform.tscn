@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwspell28tt1o"]
+[gd_scene load_steps=17 format=3 uid="uid://bwspell28tt1o"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0ad1j"]
-[ext_resource type="Texture2D" uid="uid://8klrceqclk5i" path="res://assets/rechteck.png" id="1_ujtuu"]
 [ext_resource type="Texture2D" uid="uid://c7ci4nvrndbdw" path="res://assets/quadrat.png" id="3_b6mcj"]
 [ext_resource type="Texture2D" uid="uid://cxl6d1gri0dd6" path="res://assets/dreieck.png" id="4_lnfib"]
 [ext_resource type="Texture2D" uid="uid://w51dvcm57gnn" path="res://assets/kreis.png" id="4_mtfec"]
@@ -17,6 +16,26 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_r5aas"]
 gradient = SubResource("Gradient_hcq1l")
+
+[sub_resource type="Animation" id="Animation_t86g4"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xlhug"]
+_data = {
+"idle": SubResource("Animation_t86g4")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xc2t"]
 size = Vector2(71, 126)
@@ -41,7 +60,7 @@ variation_embolden = 0.37
 [node name="DemoPlattform" type="Node2D"]
 
 [node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(640, 665)
+position = Vector2(563, 480)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("WorldBoundaryShape2D_ktxsj")
@@ -61,21 +80,24 @@ rotation = 1.57079
 position = Vector2(-2.20537e-06, 5.96046e-08)
 shape = SubResource("WorldBoundaryShape2D_ktxsj")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(145, 297)
-limit_left = 0
-limit_top = 0
-limit_bottom = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(140, 298)
+position = Vector2(54, 55)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_0ad1j")
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(24, 852)
+scale = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_bottom = 480
+
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("1_ujtuu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+libraries = {
+"": SubResource("AnimationLibrary_xlhug")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-0.5, 0)
@@ -89,7 +111,7 @@ scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_1xc2t")
 
 [node name="Plattform" type="StaticBody2D" parent="."]
-position = Vector2(955, 417)
+position = Vector2(996, 272)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform"]
 scale = Vector2(0.6, 0.3)
@@ -100,7 +122,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Plattform6" type="StaticBody2D" parent="."]
-position = Vector2(1125, 415)
+position = Vector2(1134, 277)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform6"]
 scale = Vector2(0.6, 0.3)
@@ -111,7 +133,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Plattform7" type="StaticBody2D" parent="."]
-position = Vector2(1316, 416)
+position = Vector2(1287, 271)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform7"]
 scale = Vector2(0.6, 0.3)
@@ -122,7 +144,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Plattform8" type="StaticBody2D" parent="."]
-position = Vector2(1511, 416)
+position = Vector2(1492, 267)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform8"]
 scale = Vector2(0.6, 0.3)
@@ -132,8 +154,21 @@ texture = ExtResource("3_b6mcj")
 shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
+[node name="Plattform9" type="StaticBody2D" parent="."]
+position = Vector2(1849, 259)
+scale = Vector2(-0.267934, 6.28119)
+metadata/is_victory = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Plattform9"]
+scale = Vector2(0.6, 0.3)
+texture = ExtResource("3_b6mcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plattform9"]
+shape = SubResource("RectangleShape2D_mjlfx")
+metadata/_edit_lock_ = true
+
 [node name="Spike" type="StaticBody2D" parent="."]
-position = Vector2(1370, 625)
+position = Vector2(1351, 443)
 metadata/deadly = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike"]
@@ -144,7 +179,7 @@ texture = ExtResource("4_lnfib")
 polygon = PackedVector2Array(26.5, 32, -26.5, 32, 0, -35)
 
 [node name="Plattform2" type="StaticBody2D" parent="."]
-position = Vector2(686, 482)
+position = Vector2(699, 333)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform2"]
 scale = Vector2(0.6, 0.3)
@@ -155,7 +190,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Plattform3" type="StaticBody2D" parent="."]
-position = Vector2(800, 436)
+position = Vector2(840, 305)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform3"]
 scale = Vector2(0.6, 0.3)
@@ -166,7 +201,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Plattform4" type="StaticBody2D" parent="."]
-position = Vector2(590, 550)
+position = Vector2(570, 359)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform4"]
 scale = Vector2(0.6, 0.3)
@@ -177,7 +212,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Plattform5" type="StaticBody2D" parent="."]
-position = Vector2(438, 611)
+position = Vector2(426, 414)
 
 [node name="Sprite2D" type="Sprite2D" parent="Plattform5"]
 scale = Vector2(0.6, 0.3)
@@ -188,7 +223,7 @@ shape = SubResource("RectangleShape2D_mjlfx")
 metadata/_edit_lock_ = true
 
 [node name="Coin" type="StaticBody2D" parent="."]
-position = Vector2(427, 481)
+position = Vector2(431, 305)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin"]
@@ -206,7 +241,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin2" type="StaticBody2D" parent="."]
-position = Vector2(611, 374)
+position = Vector2(567, 248)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin2"]
@@ -224,7 +259,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin3" type="StaticBody2D" parent="."]
-position = Vector2(798, 327)
+position = Vector2(697, 192)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin3"]
@@ -242,7 +277,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin5" type="StaticBody2D" parent="."]
-position = Vector2(1122, 305)
+position = Vector2(1077, 179)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin5"]
@@ -260,7 +295,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin6" type="StaticBody2D" parent="."]
-position = Vector2(1325, 326)
+position = Vector2(1297, 175)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin6"]
@@ -278,7 +313,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin7" type="StaticBody2D" parent="."]
-position = Vector2(957, 312)
+position = Vector2(842, 163)
 metadata/value = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin7"]
@@ -296,7 +331,7 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="Coin4" type="StaticBody2D" parent="."]
-position = Vector2(1518, 325)
+position = Vector2(1500, 166)
 metadata/value = 1000
 
 [node name="Sprite2D" type="Sprite2D" parent="Coin4"]
@@ -314,6 +349,8 @@ script = ExtResource("5_whbju")
 shape = SubResource("CircleShape2D_8p880")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 844.0
@@ -352,21 +389,21 @@ script = ExtResource("7_oiwhb")
 
 [node name="Save_Button" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 469.0
-offset_top = 458.0
-offset_right = 535.0
-offset_bottom = 489.0
-scale = Vector2(0.999221, 1.00295)
+offset_left = 262.0
+offset_top = 512.0
+offset_right = 328.0
+offset_bottom = 543.0
+scale = Vector2(1.5, 1.5)
 button_mask = 7
 text = "Sichern"
 
 [node name="Discard_Button" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 712.0
-offset_top = 454.0
-offset_right = 824.0
-offset_bottom = 485.0
-scale = Vector2(0.999221, 1.00295)
+offset_left = 638.0
+offset_top = 498.0
+offset_right = 750.0
+offset_bottom = 529.0
+scale = Vector2(1.5, 1.5)
 button_mask = 7
 text = "Nicht Sichern"
 
@@ -375,13 +412,15 @@ visible = false
 custom_minimum_size = Vector2(300, 50)
 offset_left = 218.0
 offset_top = 191.0
-offset_right = 518.0
+offset_right = 534.0
 offset_bottom = 241.0
+scale = Vector2(1.5, 1.5)
 placeholder_text = "Name: John Doe"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 visible = false
-offset_left = 216.0
-offset_top = 157.0
-offset_right = 256.0
-offset_bottom = 180.0
+offset_left = 220.0
+offset_top = 92.0
+offset_right = 260.0
+offset_bottom = 148.0
+scale = Vector2(1.5, 1.5)
