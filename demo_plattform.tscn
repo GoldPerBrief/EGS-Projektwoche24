@@ -334,6 +334,7 @@ autowrap_mode = 0
 shortcut_keys_enabled = false
 
 [node name="Scoreboard" type="RichTextLabel" parent="CanvasLayer"]
+visible = false
 offset_left = 334.0
 offset_top = 39.0
 offset_right = 646.0
