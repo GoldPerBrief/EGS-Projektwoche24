@@ -12,12 +12,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if has_overlapping_bodies():
-		#print("true")
-		#print(get_overlapping_bodies())
-		#print(player)
-		if get_overlapping_bodies().has(player):
-			#print("doubly true")
-			coin_object.queue_free()
-			player.collect_stuff(points_amount)
+	#if has_overlapping_bodies():
+		##print("true")
+		##print(get_overlapping_bodies())
+		##print(player)
+		#if get_overlapping_bodies().has(player):
+			##print("doubly true")
+			#coin_object.queue_free()
+			#player.collect_stuff(points_amount)
 	pass

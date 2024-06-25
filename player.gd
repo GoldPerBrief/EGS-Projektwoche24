@@ -14,17 +14,17 @@ func _ready():
 	pass
 
 func _physics_process(delta: float) -> void:
+	
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		animation.play("jump")
 	else:
 		num_jumps = 0
 	
 	for body in area_collider.get_overlapping_bodies():
 		if body.has_meta("deadly") and body.get_meta("deadly"):
-			make_dead()
+			sterben()
 		elif body.has_meta("is_victory") and body.get_meta("is_victory"):
-			stage_victory()
+			gewinnen()
 			
 	if Input.is_action_just_pressed("ui_accept") and ( is_on_floor() or num_jumps < MAX_JUMPS ):
 		velocity.y = JUMP_VELOCITY
@@ -33,21 +33,28 @@ func _physics_process(delta: float) -> void:
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
-		if direction < 0:
-			animation.play("rechts")
-			animation.flip_h = true
-		elif direction > 0:
-			animation.play("links")
-			animation.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		animation.play("default")
+
 	
+	if (velocity.y < 0):
+		animation.play("jump_up")
+	elif (velocity.y > 0):
+		animation.play("fall")
+	elif direction < 0:
+		animation.play("links")
+		animation.flip_h = true
+	elif direction > 0:
+		animation.play("rechts")
+		animation.flip_h = false
+	elif (velocity.y == 0) and (direction == 0):
+		animation.play("default")
+		
 	#get_node("Camera2D").position = position
 	move_and_slide()
 
-func stage_victory():
+func gewinnen():
 	pass
 
-func make_dead():
+func sterben():
 	pass

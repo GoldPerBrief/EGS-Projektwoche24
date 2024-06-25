@@ -41,20 +41,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_rc1qm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_anlex")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_lok81")
-}],
-"loop": true,
-"name": &"fall",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("6_j1ayi")
 }, {
 "duration": 1.0,
@@ -65,9 +51,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_rc1qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_anlex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lok81")
 }],
 "loop": false,
-"name": &"jump_up",
+"name": &"jump",
 "speed": 8.0
 }, {
 "frames": [{
@@ -112,7 +104,8 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(2.5, 2.5)
+position = Vector2(54, 55)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_lik2k")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -123,18 +116,22 @@ limit_top = 0
 limit_bottom = 480
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.112, 0.11)
+position = Vector2(4, -8)
+scale = Vector2(0.894158, 0.882011)
 shape = SubResource("RectangleShape2D_1xc2t")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(0.132042, 0.146525)
+position = Vector2(4, -8)
+scale = Vector2(0.944504, 0.924386)
 shape = SubResource("RectangleShape2D_1xc2t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -1.2)
+position = Vector2(4, -16)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_a3fbj")
-animation = &"jump_up"
+animation = &"rechts"
 autoplay = "default"
+frame_progress = 0.606706
